@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+set -e
+
+staged_tf=$(git diff --cached --name-only --diff-filter=ACMR | grep -E '\.tf$' || true)
+if [ -z "$staged_tf" ]; then
+  echo "No *.tf files staged, skipping OpenTofu checks."
+  exit 0
+fi
+
+echo "Running OpenTofu fmt -check..."
+tofu fmt -check -recursive
+
+echo "Running OpenTofu init (backend=false) and validate..."
+tofu init -backend=false
+tofu validate

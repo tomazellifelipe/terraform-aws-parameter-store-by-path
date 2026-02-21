@@ -1,0 +1,16 @@
+{
+  "name": "terraform-aws-parameter-store-by-path",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@9.14.2",
+  "scripts": {
+    "prepare": "husky",
+    "lint:commit": "commitlint --edit",
+    "lint:terraform": "tofu fmt -check -recursive && tofu init -backend=false && tofu validate"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
+    "husky": "^9.1.7"
+  }
+}
