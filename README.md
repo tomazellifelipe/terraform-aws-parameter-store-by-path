@@ -101,4 +101,4 @@ The `release-type` is set to `terraform-module`, which follows the versioning co
 
 ### PR Title Validation
 
-Pull request titles are validated by the `.github/workflows/lint-pr.yml` workflow using [action-semantic-pull-request](https://github.com/amannn/action-semantic-pull-request). This ensures PR titles also follow the Conventional Commits format, which is important when using squash merges since the PR title becomes the commit message on `main`.
+Pull request titles are validated by the `.github/workflows/lint-pr.yml` workflow using [action-semantic-pull-request](https://github.com/amannn/action-semantic-pull-request). This ensures PR titles also follow the Conventional Commits format, which is important when using squash merges since the PR title becomes the commit message on `main`.aaaaaaaaaaaaaaaaaaaa
