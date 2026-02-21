@@ -12,5 +12,30 @@
     "@commitlint/cli": "^19.6.0",
     "@commitlint/config-conventional": "^19.6.0",
     "husky": "^9.1.7"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "header-max-length": [2, "always", 50],
+      "type-enum": [
+        2,
+        "always",
+        [
+          "feat",
+          "fix",
+          "refactor",
+          "docs",
+          "chore",
+          "ci",
+          "perf",
+          "test",
+          "revert",
+          "build",
+          "style"
+        ]
+      ]
+    }
   }
 }
