@@ -1,13 +1,17 @@
 name: Generate terraform docs
+
 on:
-  pull_request:
-    branches:
-      - main
+  pull_request_target:
+    types:
+      - opened
+      - reopened
+      - edited
+      - synchronize
+
 jobs:
   docs:
     name: Generate terraform docs
     runs-on: ubuntu-latest
-    if: startsWith(github.head_ref, 'release-please')
     steps:
       - uses: actions/checkout@v6
         with:
@@ -18,4 +22,3 @@ jobs:
         with:
           config-file: .terraform-docs.yml
           git-push: true
-          git-push-sign-off: true
