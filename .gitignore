@@ -1,6 +1,10 @@
 # Created by https://www.toptal.com/developers/gitignore/api/asdf,terraform
 # Edit at https://www.toptal.com/developers/gitignore?templates=asdf,terraform
 
+### Node / pnpm ###
+node_modules/
+.pnpm-store/
+
 ### asdf ###
 /.tool-versions
 
@@ -11,6 +15,7 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
+*.terraform.lock.hcl
 
 # Crash log files
 crash.log
