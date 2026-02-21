@@ -10,19 +10,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  docs:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v6
-
-      - name: Render terraform docs inside the README.md
-        uses: terraform-docs/gh-actions@v1
-        with:
-          config-file: .terraform-docs.yml
-          git-push: true
-
   release-please:
-    needs: docs
     runs-on: ubuntu-latest
     steps:
       - uses: googleapis/release-please-action@v4
