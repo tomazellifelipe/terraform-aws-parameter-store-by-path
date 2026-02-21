@@ -31,6 +31,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_path"></a> [path](#input\_path) | Prefix path of the parameter(s) to retrive. | `string` | n/a | yes |
+| <a name="input_recursive"></a> [recursive](#input\_recursive) | Whether to retrieve all parameters under the path recursively. | `bool` | `false` | no |
 
 ## Outputs
 
