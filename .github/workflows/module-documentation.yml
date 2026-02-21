@@ -1,10 +1,13 @@
 name: Generate terraform docs
 on:
-  - pull_request
+  pull_request:
+    branches:
+      - main
 jobs:
   docs:
     name: Generate terraform docs
     runs-on: ubuntu-latest
+    if: startsWith(github.head_ref, 'release-please')
     steps:
       - uses: actions/checkout@v6
         with:
