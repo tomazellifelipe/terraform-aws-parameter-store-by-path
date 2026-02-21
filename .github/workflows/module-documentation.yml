@@ -3,6 +3,7 @@ on:
   - pull_request
 jobs:
   docs:
+    name: Generate terraform docs
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
