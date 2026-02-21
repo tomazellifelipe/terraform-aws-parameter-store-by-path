@@ -7,3 +7,9 @@ variable "path" {
     error_message = "Path must start with / and end with /."
   }
 }
+
+variable "recursive" {
+  description = "Whether to retrieve all parameters under the path recursively."
+  type        = bool
+  default     = false
+}

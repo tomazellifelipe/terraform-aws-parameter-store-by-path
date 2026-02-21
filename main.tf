@@ -1,5 +1,6 @@
 data "aws_ssm_parameters_by_path" "parameters" {
-  path = var.path
+  path      = var.path
+  recursive = var.recursive
 }
 
 locals {
